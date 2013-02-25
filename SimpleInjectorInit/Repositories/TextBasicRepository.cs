@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,8 @@ namespace SimpleInjectorInit.Repositories
             var returnText = "Text Repo not initialised!";
 
             // Pull this information from the file system..
-            var filePath = @"C:\Temp\TextRepo\BasicTextRepo.txt";
+            var path = ConfigurationManager.AppSettings["TextRepositoryLocation"];
+            var filePath = string.Format("{0}{1}", path, "BasicTextRepo.txt");
 
             using (var sr = new StreamReader(filePath))
             {

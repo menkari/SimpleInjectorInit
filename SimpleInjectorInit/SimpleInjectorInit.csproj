@@ -160,6 +160,10 @@
   <ItemGroup>
     <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\PublishToWebFolder.pubxml" />
+    <None Include="Properties\PublishProfiles\WebDeploy.pubxml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -189,8 +193,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="BeforeBuild">
-  	<RemoveDir Directories="$(MyDirectory)" Condition="Exists('$(TempDirectory)')" />
-		<Delete Files="$(MyFiles)" Condition="Exists('$(MyFiles)')" />
+    <RemoveDir Directories="$(MyDirectory)" Condition="Exists('$(TempDirectory)')" />
+    <Delete Files="$(MyFiles)" Condition="Exists('$(MyFiles)')" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
