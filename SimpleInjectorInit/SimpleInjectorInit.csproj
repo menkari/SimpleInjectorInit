@@ -161,6 +161,7 @@
     <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\IISDeploymentStaging.pubxml" />
     <None Include="Properties\PublishProfiles\PublishToWebFolder.pubxml" />
     <None Include="Properties\PublishProfiles\WebDeploy.pubxml" />
   </ItemGroup>

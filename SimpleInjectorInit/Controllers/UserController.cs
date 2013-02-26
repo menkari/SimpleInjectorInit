@@ -30,6 +30,11 @@ namespace SimpleInjectorInit.Controllers
 
             return View();
         }
+        
+        public string Heatbeat()
+        {
+            return "I'm Alive";
+        }
 
     }
 }
